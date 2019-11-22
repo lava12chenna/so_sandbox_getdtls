@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sales order details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/so.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="main.js"></script>
+</head>
+
+<body class="body">
+    <main>
+        <h2 class="main"> Sales order details </h2>
+    </main>
+    <div>
+        <form action='/get/salesorder' method='POST' class="form-group">
+            <label for="SO"> Sales order number </label>
+            <input type="text" id="SO" name="so_no" value="<%= hdr !== undefined ? hdr.SalesOrder : '' %>">
+            <button type="submit" class="btn btn-info"> Get Details</button>
+        </form>
+    </div>
+
+    <div class="<%= hide_flg === 'X' ? 'exist':'notexist' %>">
+        <h4> Sales Header details</h3>
+        <table class="table">
+            <thead class="table bg-info">
+                <tr>
+                    <th> SalesOrder </th>
+                    <th> SalesOrderType </th>
+                    <th> SalesOrganization </th>
+                    <th> DistributionChannel </th>
+                    <th> OrganizationDivision </th>
+                </tr>
+            </thead>
+            <tr>
+               <% if (hdr!== undefined) { %>
+                <td>
+                    <%= hdr.SalesOrder %>
+                </td>
+                <td>
+                    <%= hdr.SalesOrderType %>
+                </td>
+                <td>
+                    <%= hdr.SalesOrganization %>
+                </td>
+                <td>
+                    <%= hdr.DistributionChannel %>
+                </td>
+                <td>
+                    <%= hdr.OrganizationDivision %>
+                </td>
+                <% }; %>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="<%= hide_flg === 'X' ? 'exist':'notexist' %>">
+        <h4> Sales Item details </h3>
+        <table class="table">
+            <thead class="table bg-info">
+                <tr>
+                    <th> SalesOrder </th>
+                    <th> SalesOrderItem </th>
+                    <th> SalesOrderItemCategory </th>
+                    <th>PurchaseOrderByCustomer</th>
+                    <th> Material </th>
+                    <th> RequestedQuantity </th>
+                    <th> RequestedQuantityUnit </th>
+                    <th> TransactionCurrency </th>
+                    <th> NetAmount </th>
+                    <th> MaterialGroup</th>
+                    <th> MaterialPricingGroup</th>
+                    <th> Batch</th>
+                    <th> ProductionPlant</th>
+                    <th> StorageLocation</th>
+                    <th> DeliveryGroup</th>
+                    <th> ShippingPoint</th>
+                    <th> ShippingType</th>
+                    <th> DeliveryPriority</th>
+                    <th> IncotermsClassification</th>,
+                    <th> IncotermsTransferLocation</th>
+                    <th> IncotermsLocation1</th>
+                    <th> IncotermsLocation2</th>
+                    <th> CustomerPaymentTerms</th>
+                    <th> SalesDocumentRjcnReason</th>
+                    <th> ItemBillingBlockReason</th>
+                    <th> WBSElement</th>
+                    <th> ProfitCenter</th>
+                    <th> ReferenceSDDocument</th>
+                    <th> ReferenceSDDocumentItem</th>
+                    <th> SDProcessStatus</th>
+                    <th> DeliveryStatus</th>
+                </tr>
+            </thead>
+            <% if (itm !== undefined) { %>
+            <% itm.forEach(element => { %>
+                <tr>
+                    <td>
+                        <%= element.SalesOrder    %>
+                    </td>
+                    <td>
+                        <%= element.SalesOrderItem    %>
+                    </td>
+                    <td>
+                        <%= element.SalesOrderItemCategory    %>
+                    </td>
+                    <td>
+                        <%= element.PurchaseOrderByCustomer   %>
+                    </td>
+                    <td>
+                        <%= element.Material    %>
+                    </td>
+                    <td>
+                        <%= element.RequestedQuantity    %>
+                    </td>
+                    <td>
+                        <%= element.RequestedQuantityUnit    %>
+                    </td>
+                    <td>
+                        <%= element.TransactionCurrency    %>
+                    </td>
+                    <td>
+                        <%= element.NetAmount    %>
+                    </td>
+                    <td>
+                        <%= element.MaterialGroup   %>
+                    </td>
+                    <td>
+                        <%= element.MaterialPricingGroup   %>
+                    </td>
+                    <td>
+                        <%= element.Batch   %>
+                    </td>
+                    <td>
+                        <%= element.ProductionPlant   %>
+                    </td>
+                    <td>
+                        <%= element.StorageLocation   %>
+                    </td>
+                    <td>
+                        <%= element.DeliveryGroup   %>
+                    </td>
+                    <td>
+                        <%= element.ShippingPoint   %>
+                    </td>
+                    <td>
+                        <%= element.ShippingType   %>
+                    </td>
+                    <td>
+                        <%= element.DeliveryPriority   %>
+                    </td>
+                    <td>
+                        <%= element.IncotermsClassification   %>
+                    </td>
+                    <td>
+                        <%= element.IncotermsTransferLocation   %>
+                    </td>
+                    <td>
+                        <%= element.IncotermsLocation1   %>
+                    </td>
+                    <td>
+                        <%= element.IncotermsLocation2   %>
+                    </td>
+                    <td>
+                        <%= element.CustomerPaymentTerms   %>
+                    </td>
+                    <td>
+                        <%= element.SalesDocumentRjcnReason   %>
+                    </td>
+                    <td>
+                        <%= element.ItemBillingBlockReason   %>
+                    </td>
+                    <td>
+                        <%= element.WBSElement   %>
+                    </td>
+                    <td>
+                        <%= element.ProfitCenter   %>
+                    </td>
+                    <td>
+                        <%= element.ReferenceSDDocument   %>
+                    </td>
+                    <td>
+                        <%= element.ReferenceSDDocumentItem   %>
+                    </td>
+                    <td>
+                        <%= element.SDProcessStatus   %>
+                    </td>
+                    <td>
+                        <%= element.DeliveryStatus   %>
+                    </td>
+
+
+                </tr>
+                <% });  } %>
+
+        </table>
+    </div>
+</body>
+
+</html>

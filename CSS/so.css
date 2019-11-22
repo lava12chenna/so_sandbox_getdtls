@@ -1,0 +1,38 @@
+
+
+.body{
+
+    background-color: aliceblue;
+}
+.main {
+   text-align: center; 
+}
+
+.get_btn {
+
+    color : blue;
+}
+
+.notexist {
+   display: none; 
+}
+
+.exist {
+   display: initial;
+   margin-top :80px; 
+}
+
+.so_hdr{
+
+   margin-top : 10px;
+   border: solid 1px;  
+}
+
+h3{
+    margin-top : 80px;
+ 
+}
+table, thead, th, tr, td {
+    border: solid 1px;
+}
+

@@ -1,0 +1,34 @@
+{
+    "SalesOrderType": "OR",
+    "SalesOrganization": "5100",
+    "DistributionChannel": "99",
+    "OrganizationDivision": "01",
+    "SoldToParty": "B001",
+    "PurchaseOrderByCustomer": "POC-100",
+    "CustomerPurchaseOrderDate": "/Date(1492041600000)/",
+    "TransactionCurrency": "GBP",
+    "SDDocumentReason": "001",
+    "CustomerPaymentTerms": "0003",
+    "to_Item": {
+        "results": [
+            {
+                "SalesOrderItem": "00010",
+                "Material": "1002003001",
+                "RequestedQuantity": "5",
+                "RequestedQuantityUnit": "EA",
+                "ProductionPlant": "BZ01",
+                "StorageLocation": "1001",
+                "ShippingPoint": "BZ01"
+            },
+            {
+                "SalesOrderItem": "00020",
+                "Material": "1002003002",
+                "RequestedQuantity": "5",
+                "RequestedQuantityUnit": "EA",
+                "ProductionPlant": "BZ01",
+                "StorageLocation": "1001",
+                "ShippingPoint": "BZ01"
+            }
+        ]
+    }
+}
