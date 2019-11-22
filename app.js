@@ -95,8 +95,8 @@ axios({
   } 
   response.write(JSON.stringify(anObject));
   response.send(anObject);
-  res.json({"foo": "bar"});*/
-});
+  res.json({"foo": "bar"});
+});*/
 
 });
 
