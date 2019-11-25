@@ -94,7 +94,7 @@ axios({
     lastName: 'Flintstone'
   } 
   response.write(JSON.stringify(anObject));
-  response.send(anObject);
+    response.send(anObject);
   res.json({"foo": "bar"});
 });*/
 
