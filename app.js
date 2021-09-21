@@ -109,7 +109,7 @@ app.post('/get/salesorder', (req, res, next) => {
   
     axios({ url: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('" + req.body.so_no + "')", 
     method : 'get', headers : {
-    apikey: '4bLchgPSlaqrPINB9qW36e6CSbURGpdJ'
+    apikey: ''
   
                             }
      }),
@@ -121,7 +121,7 @@ app.post('/get/salesorder', (req, res, next) => {
     return axios({
       url: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('" + req.body.so_no + "')",
       method: 'get', headers: {
-        apikey: '4bLchgPSlaqrPINB9qW36e6CSbURGpdJ'
+        apikey: ''
       }
     })
 
@@ -132,7 +132,7 @@ app.post('/get/salesorder', (req, res, next) => {
     return axios({
       url: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('" + req.body.so_no + "')/to_Item",
       method: 'get', headers: {
-        apikey: '4bLchgPSlaqrPINB9qW36e6CSbURGpdJ'
+        apikey: ''
       }
     })
   }
@@ -187,7 +187,7 @@ xhr.addEventListener("readystatechange", function () {
 xhr.open("GET", "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('1')");
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("APIKey", "4bLchgPSlaqrPINB9qW36e6CSbURGpdJ");
+xhr.setRequestHeader("APIKey", "");
 xhr.send(data);
 */
 
